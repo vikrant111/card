@@ -128,7 +128,7 @@ class Discount {
                                     </div>
                                 </div>
                                 <div style='display: flex;'>
-                                    ${(item.price).toFixed(2)} ${item.currency} 
+                                    <strong>${(item.price).toFixed(2)} ${item.currency}</strong>
                                     <span class="offer-previous-price" style='display: none;'>$ ${(item.price+50).toFixed(2)}</span>
                                 </div>
                             </div>
