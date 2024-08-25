@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+    background-color: lightgray;
+}
+
+.parent-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card-container{
+    width: 35rem;
+    background-color: white;
+    border-radius: 8px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount-option-container{
+    width: 100%;
+    margin-top: 1.5em;
+    border-radius: 10px;
+    /* height: 4em; */
+    display: flex;
+
+}
+
+
+.discount-option-wrapper{
+    width: 100%;
+}
+
+
+
+
+#discountCtr{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.percentage-container {
+    position: relative; /* Allows absolute positioning of the pseudo-element */
+    background-color: #ff6b82;
+    color: white;
+    width: 20%;
+    padding-right: 5px; /* Padding to ensure content doesn't overlap the line */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.percentage-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px; /* Width of the dashed line */
+    height: 100%;
+    background-image: linear-gradient(to bottom, #fff 67%, rgba(255, 255, 255, 0) 0%);
+    background-size: 2px 8px; /* Controls the size of the dashes and spacing */
+    background-repeat: repeat-y;
+    border-radius: 2px; /* Curves the edges of each dash */
+}
+
+
+
+.offer-container{
+    
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    
+    border-bottom: 1px solid #d4d4d4;
+    border-right: 1px solid #d4d4d4;
+    border-top: 1px solid #d4d4d4;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    padding:10px;
+}
+
+.offer-container-active{
+    
+    border-left: 1px solid #d4d4d4;
+    border-top-left-radius: 10px;
+    background-color: #fff9fa;
+    border-bottom-left-radius: 10px;
+    border-color: #ff6b82;
+}
+
+
+.size-and-color-wrapper-container{
+    margin-left: 15px;
+}
+
+.price-and-radio-popularity-container {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.popularity-container{
+    margin-left: 15px;
+}
+
+
+.offer-percentage{
+    margin-left: 8px;
+    background-color: #ff6b82;
+    border-radius: 5px;
+}
+
+.offer-percentage > p{
+    margin: 0;
+    padding: 0 6px;
+    white-space: nowrap;
+}
+
+
+.offer-previous-price{
+    margin-left: 8px;
+    color: rgb(158, 157, 157);
+    text-decoration: line-through;
+    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+select{
+    border-color: lightgray;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: small;
+}
+
+
+
+.free-delivery-and-sum-total-container{
+    display: flex; 
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.Add-to-cart-button{
+    width: 80%;
+    padding: 10px;
+    color: #fff;
+    background-color: #ff6b82;
+    border-radius: 6px;
+    border: none;
+}
+
+
+.Add-to-cart-button {
+    width: 80%;
+    padding: 10px;
+    color: #fff;
+    background-color: #ff6b82;
+    border-radius: 6px;
+    border: none;
+
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor pointer on hover */
+    font-size: small; /* Font size for the button text */
+    font-family: Arial, sans-serif; /* Font family */
+}
+
+.Add-to-cart-button p {
+    margin: 0; /* Remove default margin */
+    font-size: x-large; /* Font size for the + */
+    display: inline; /* Ensures it aligns inline with text */
+}
+
+
+
+/* Styles for tablets (screen width up to 768px) */
+@media only screen and (max-width: 768px) {
+
+
+    .card-container{
+        width: 80%;
+        background-color: white;
+        border-radius: 8px;
+        
+    }
+
+    .discount-option-container{
+        max-width: 100%;
+        display: flex;
+    
+    }
+
+}
+
+/* Styles for mobile devices (screen width up to 480px) */
+@media only screen and (max-width: 480px) {
+  
+
+    .card-container{
+        width: 98%;
+        background-color: white;
+        border-radius: 8px;
+      
+    }
+
+    .discount-option-container{
+        max-width: 98%;
+        display: flex;
+    }
+
+    #discountCtr {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+}
+
+
